@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Goals Per Match Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>  
-<body>
-  <h1>⚽ Goals Per Match Calculator</h1>
-  <p style="text-align: center;">
-    <a href="sample.csv" download>📥 Download sample CSV</a>
-  </p>
-  <p id="result" style="display: none;"></p>
 
-  <script src="papaparse.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <!-- ✨ Add Picnic CSS and your custom styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="card" style="max-width: 600px; margin: 3rem auto; padding: 2rem;">
+      <h1>⚽ Goals Per Match</h1>
+      <p>Upload your match data and get instant insights.</p>
+
+      <input type="file" id="csvFile" accept=".csv" class="primary">
+
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="sample.csv" download class="button">📥 Download sample CSV</a>
+      </p>
+
+      <p id="result" class="success" style="display: none;"></p>
+    </main>
+
+    <script src="papaparse.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
