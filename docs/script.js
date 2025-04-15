@@ -24,8 +24,15 @@ document.getElementById("csvFile").addEventListener("change", function (event) {
       const matchesText = `📊 Matches analyzed: ${matchCount}`;
 
       const resultElement = document.getElementById("result");
+
+      // Show result and apply content
+      resultElement.style.display = "block";
       resultElement.innerHTML = `${resultText}<br><span id="matches">${matchesText}</span>`;
 
       // Trigger animation
       resultElement.classList.remove("show");
-      void resultElement.offsetWidth; // re
+      void resultElement.offsetWidth; // force reflow
+      resultElement.classList.add("show");
+    }
+  });
+});
